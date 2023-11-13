@@ -9,22 +9,19 @@ const Home = () => {
 
 	return (
 		<>
-			<h2 className='text-sm uppercase'>Películas</h2>
+			<h2 className=''>Películas</h2>
 			{isLoading && <div>Cargando...</div>}
 			{error && <div>{error.message}</div>}
-			<div className='no-scrollbar flex min-h-[100px] w-full gap-2 overflow-y-hidden overflow-x-scroll '>
+			<div className=''>
 				{data && !error
 					? data.map((movie) => {
 							return (
-								<div
-									className='min-w-[75px] overflow-hidden rounded-sm bg-slate-800 text-xs text-white shadow-md'
-									key={movie.id}
-								>
-									<div className='w-full'>
+								<div className='' key={movie.id}>
+									<div className=''>
 										<img
 											src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
 											alt={movie.title}
-											className='h-[100px] w-full'
+											className=''
 										/>
 									</div>
 								</div>
